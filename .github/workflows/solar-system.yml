@@ -6,6 +6,10 @@ on:
       branches:
         - main
         - 'feature/*'
+env:
+    MONGO_URI: 'mongosh docdb-2025-03-01-07-23-33.cluster-cehi0w0w8fu7.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile global-bundle.pem'
+    MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
+    MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
 jobs:
   unit-testing:
     name: Unit-Testing
